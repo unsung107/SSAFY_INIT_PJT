@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>영화추천사이트</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Sunflower:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="02_movie.css">
+  <style>
+
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <!-- 네비게이션 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="nav">
+    <a class="navbar-brand text-dark" href="02_movie.html">영화추천시스템</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-dark" href="02_movie.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-secondary disabled" href="#">친구평점보러가기</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Log in</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+
+  <!-- 헤더 -->
+  <header id="header">
+    <h2>
+      당신에게 어울리는 영화를 추천해드립니다
+    </h2>
+  </header>
+
+  <!-- 영화리스트 -->
+  <div id="movielist" class="container bg-light">
+    <div id="subtitle">
+      <p id="bottomline" class="border-bottom border-warning"></p>
+      <h3>영화목록</h3>
+    </div>
+    <div class="row">
+      <div class="b-blcok col-xl-3 col-lg-4 col-md-6 col-12">
+        <div class="card" style="width: 16rem;">
+          <img src="images/라이온킹.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">라이온 킹 <br>
+              <div class="btn btn-secondary">8.7</div>
+            </h4>
+            <hr>
+            <p class="card-text">모험</p>
+            <p class="card-text">2019-07-17</p>
+            <a href="#" class="btn btn-primary">영화정보 보러가기</a>
+          </div>
+        </div>
+      </div>
+      <div class="b-blcok col-xl-3 col-lg-4 col-md-6 col-12">
+        <div class="card" style="width: 16rem;">
+          <img src="images/엑시트.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">엑시트<br>
+              <div class="btn btn-primary">9.07</div>
+            </h4>
+            <hr>
+            <p class="card-text">엑시트</p>
+            <p class="card-text">2019-07-31</p>
+            <a href="#" class="btn btn-primary">영화정보 보러가기</a>
+          </div>
+        </div>
+      </div>
+      <div class="b-blcok col-xl-3 col-lg-4 col-md-6 col-12">
+        <div class="card" style="width: 16rem;">
+          <img src="images/사자.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">사자 <br>
+              <div class="btn btn-secondary">8.32</div>
+            </h4>
+            <hr>
+            <p class="card-text">미스터리</p>
+            <p class="card-text">2019-07-31</p>
+            <a href="#" class="btn btn-primary">영화정보 보러가기</a>
+          </div>
+        </div>
+      </div>
+      <div class="b-blcok col-xl-3 col-lg-4 col-md-6 col-12">
+        <div class="card" style="width: 16rem;">
+          <img src="images/알라딘.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">알라딘 <br>
+              <div class="btn btn-primary">9.45</div>
+            </h4>
+            <hr>
+            <p class="card-text">판타지</p>
+            <p class="card-text">2019-05-23</p>
+            <a href="#" class="btn btn-primary">영화정보 보러가기</a>
+          </div>
+        </div>
+      </div>
+      <div class="b-blcok col-xl-3 col-lg-4 col-md-6 col-12">
+        <div class="card" style="width: 16rem;">
+          <img src="images/레드슈즈.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">레드슈즈 <br>
+              <div class="btn btn-primary">9.24</div>
+            </h4>
+            <hr>
+            <p class="card-text">애니메이션</p>
+            <p class="card-text">2019-07-25</p>
+            <a href="#" class="btn btn-primary">영화정보 보러가기</a>
+          </div>
+        </div>
+      </div>
+      <div class="b-blcok col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="card" style="width: 16rem;">
+            <img src="images/마이펫의이중생활2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">마이펫의 이중생활 2<br>
+                <div class="btn btn-primary">9.12</div>
+              </h4>
+              <hr>
+              <p class="card-text">애니메이션</p>
+              <p class="card-text">2019-07-31</p>
+              <a href="#" class="btn btn-primary">영화정보 보러가기</a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- 푸터 -->
+
+  <div class="fixed-bottom text-left">
+
+    <footer id="foot" class="fixed-bottom bg-light text-secondary">
+      <p class="d-inline mr-auto">@2019, SSAFY</p>
+      <p class="d-inline text-right" id="up"><a href="#header" class="d-inline badge badge-primary text-right">Up</a>
+      </p>
+    </footer>
+  </div>
+  </div>
+
+
+  <!-- Bootstrap Javascript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+*{ margin: 0; padding: 0; }
+
+/* body {
+  height: 3000px;
+} */
+
+.navbar-brand {
+  font-family: 'Sunflower', sans-serif;
+  font-weight: bold;
+}
+
+
+header {
+  margin-top: 30px;
+  /* display: flex; */
+  height: 350px;
+  width: 100%;
+  font-family: 'Black Han Sans', sans-serif;
+  background-image: url(images/header.jpg);
+  background-position-x: center;
+  background-position-y: -200px;
+  background-repeat: no-repeat;
+  /* background-size: cover;
+  justify-content: center;
+  align-items: center; */
+}
+
+header h2 {
+  width: 230px;
+  text-align : center;
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+footer{
+  height: 50px
+}
+footer>p {
+  position: absolute;
+}
+footer>#up {
+  position: absolute;
+  right: 10px;
+}
+
+#subtitle {
+  display: flex;
+  top:350px;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+#subtitle>p {
+  padding: 3rem 0px;
+}
+#subtitle>h3 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 110%;
+  padding: 3rem 0px;
+}
+#bottomline {
+  position: absolute;
+  width : 70px;
+  
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin : 1rem 0; text-align: center;
+}
+
+
+.b-blcok{ 
+  display: flex;
+  justify-content: center;
+}
+
+
+.card-body{
+  text-align: left;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.modal{
+  text-align: left;
+  font-family: 'Do Hyeon', sans-serif;
+}
