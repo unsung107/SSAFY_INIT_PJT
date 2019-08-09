@@ -15,19 +15,29 @@
 
 1. 영화 추천 사이트 메인페이지 기초 레이아웃 구성
 
-![](C:\Users\student\development\pjt\PJT_04\images\전체 - xl.PNG)
+![](images\전체 - xl.PNG)
+
+
 
 sticky navigation bar 아 sticky footer bar header container 로 구성된 레이아웃을 작성한다.
 
 2. 영화추천 사이트를 위한 영화 리스트 구성
 
-![](C:\Users\student\development\pjt\PJT_04\images\전체 - lg.PNG)
+![](images\전체 - lg.PNG)
 
-![전체 - md](C:\Users\student\development\pjt\PJT_04\images\전체 - md.PNG)
 
-![전체 - sm](C:\Users\student\development\pjt\PJT_04\images\전체 - sm.PNG)
 
-![전체 - xl](C:\Users\student\development\pjt\PJT_04\images\전체 - xl.PNG)
+![전체 - md](images\전체 - md.PNG)
+
+
+
+
+
+![전체 - sm](images\전체 - sm.PNG)
+
+
+
+![전체 - xl](images\전체 - xl.PNG)
 
 위 그림과같이 디스플레이 크기에 따라 영화 목록의 가로줄의 개수가 달라지 도록 구성한다.
 
@@ -42,7 +52,9 @@ sticky navigation bar 아 sticky footer bar header container 로 구성된 레�
 
 3. 영화 상세 보기
 
-![](C:\Users\student\development\pjt\PJT_04\images\모달.PNG)
+   
+
+![](images\모달.PNG)
 
 영화 이미지를 클릭하면 modal이 나오도록 만든다.
 
