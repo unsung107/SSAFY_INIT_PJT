@@ -23,15 +23,28 @@ python manage.py startapp movies
 
 그 후 기본적인 셋팅을 실시한다.
 
+## Base.html 만들기
 
+앞으로 html에 적용할 base.html을 만들어주기위하여 PJT_05/templates/base.html을 만들어준다.
 
+이 때, PJT_05/templates 는 templates로 자동으로 읽히지 않기때문에
 
+### PJT_05/setting.py
+
+```python
+TEMPLATES = [
+    {
+        'DIRS': [os.path.join(BASE_DIR, 'PJT_05', 'templates')],
+  
+```
+
+와 같이 추가해준다.
 
 
 
 ## 영화 정보 데이터 베이스 만들기
 
-pjt_05 프로젝트에 존재하는 models.py 에서
+### pjt_05/models.py 에서
 
 ```python
 from django.db import models
@@ -64,9 +77,11 @@ $ python manage.py migrate
 
 를 이용하여 데이터 베이스를 적용시켜주고 예시 데이터를 만들어준다.
 
-PJT_05에 존재하는
 
-urls.py 에서
+
+## Movies/ 를 통해오는 url 넘겨주기
+
+### PJT_05/urls.py 에서
 
 ```python
 from django.contrib import admin
@@ -81,7 +96,9 @@ urlpatterns = [
 
 으로 작성하여 앞으로 movies/ 로 들어오는 주소를 movies 어플로 넘겨준다.
 
-movies/urls.py
+
+
+### movies/urls.py
 
 ```python
 from django.urls import path
@@ -98,7 +115,7 @@ urlpatterns = [
 ]
 ```
 
-위와 같이 movies/ 를 통해 들어올 url 들을 urls.py에 등록해준다.
+위와 같이 movies/ 를 통해 들어올 url 들을 movies/urls.py에 등록해준다.
 
 
 
@@ -118,7 +135,7 @@ movie = Movie.objects.get(pk=movie_pk)
 
 ## 영화 생성하기
 
-movies/new.html
+### movies/new.html
 
 ```html
 {% extends 'base.html' %}
@@ -146,7 +163,7 @@ movies/new.html
 
 과 같이 인풋값을 받아 create 로 보낸다.
 
-views.create
+### views.create
 
 ```python
 def create(request):
@@ -160,8 +177,9 @@ def create(request):
     poster_url = request.GET.get('poster_url')
     description = request.GET.get('description')
     movie = Movie(title=title, title_en=title_en, audience=audience, open_date=open_date, genre=genre, watch_grade=watch_grade, score=score, poster_url=poster_url, description=description)
+    
+    
     movie.save()
-
 
     context = {
         'title': movie.title
@@ -172,9 +190,11 @@ def create(request):
 
 위와 같이 받은 정보를 저장해주고 새로운 Movie 의 객체를 생성하여 저장한다.
 
+
+
 ## 영화 수정하기
 
-movies/edit.html
+### movies/edit.html
 
 ```html
 {% extends 'base.html' %}
@@ -202,7 +222,7 @@ movies/edit.html
 
 으로 update url로 보내준뒤
 
-views.update
+### views.update
 
 ```python
 def update(request, edit_pk):
@@ -233,7 +253,7 @@ def update(request, edit_pk):
 
 ## 영화삭제하기
 
-urls.py
+### urls.py
 
 ```python
 path('<int:delete_pk>/delete/', views.delete),
@@ -243,7 +263,7 @@ path('<int:delete_pk>/delete/', views.delete),
 
 
 
-views.delete
+### views.delete
 
 ```python
 def delete(request, delete_pk):
