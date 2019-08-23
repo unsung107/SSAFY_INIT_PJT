@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}영화 수정하기{% endblock title %}
+{% block content %}
+<h1>영화 수정하기</h1>
+
+<form action="/movies/{{ edit_pk }}/update/">
+영화 제목 : <input type="text" name="title"><br>
+영화 제목(영문) : <input type="text" name="title_en"><br>
+누적관객수 : <input type="number" name="audience" id=""><br>
+영화 개봉일: <input type="date" name="open_date"><br>
+장르 : <input type="text" name="genre"><br>
+관람등급 : <input type="text" name="watch_grade"><br>
+평점 : <input type="number" name="score"><br>
+포스터 URL : <input type="text" name="poster_url"><br>
+영화상세정보 : <textarea name="description"></textarea><br>
+<button type="submit">수정하기</button>
+</form>
+
+<hr>
+<a href="/movies/"><button> 돌아가기 </button></a>
+{% endblock content %}
