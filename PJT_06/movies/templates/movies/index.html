@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block title %}Movie::index{% endblock title %}
+{% block body %}
+<img src="{% static 'movies/img/noru.jpg' %}" alt="CAT"><br>
+<a href=" {% url 'movies:create' %} ">[새 영화 등록]</a><br>
+
+{% for movie in movies %}
+
+<p>
+<a href=" {% url 'movies:detail' movie.pk %} ">{{ forloop.counter }}. {{ movie.title }} 평점: {{ movie.score }}</a>
+</p>
+
+{% empty %}
+영화가 없습니다.
+{% endfor %}
+{% endblock body %}

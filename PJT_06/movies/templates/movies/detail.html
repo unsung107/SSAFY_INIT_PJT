@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Movie::detail{% endblock title %}
+
+{% block body %}
+<p>영화명 : {{ movie.title }}</p>
+<p>영화명(영문) : {{ movie.title_en }}</p>
+<p>누적 관객수 : {{ movie.audience }}</p>
+<p>개봉일 : {{ movie.open_date }}</p>
+<p>장르 : {{ movie.genre }}</p>
+<p>관람등급 : {{ movie.watch_grade }}</p>
+<p>평점 : {{ movie.score }}</p>
+<p>포스터이미지 URL : {{ movie.poster_url }}</p>
+<p>영화소개 : {{ movie.description }}</p>
+
+
+<a href=" {% url 'movies:index' %} ">목록</a>
+<a href="{% url 'movies:update' movie.pk %}">수정</a>
+<form action="{% url 'movies:delete' movie.pk %}" method='POST'>
+{% csrf_token %}
+<button type="submit">삭제하기</button></form>
+
+<form action="{% url 'movies:comment_create' movie.pk %}" method='POST'>
+{% csrf_token %}
+{{ comment_form }}
+<button type="submit">작성</button>
+</form>
+
+
+{% for comment in comments %}
+<li> {{ comment.content }} 평점: {{ comment.score}} </li>
+
+{% empty %}
+아직 댓글이 없습니다.
+{% endfor %}
+{% endblock body %}
