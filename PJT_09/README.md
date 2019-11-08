@@ -129,10 +129,10 @@ MovieListItem.vue
 
 로 수정해준다.
 
-![1](.\img\1.JPG)
+![1](img\1.JPG)
 
-![2](.\img\2.JPG)
+![2](img\2.JPG)
 
-![3](.\img\3.JPG)
+![3](img\3.JPG)
 
-![4](.\img\4.JPG)
+![4](img\4.JPG)
