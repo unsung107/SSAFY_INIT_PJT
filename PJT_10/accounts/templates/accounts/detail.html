@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+상세보기
+{% endblock title %}
+
+{% block body %}
+
+{{user.username}}
+<br>
+상세보기
+<hr>
+{% for review in reviews %}
+
+{{review.content}}
+{% empty %}
+없다
+{% endfor %}
+<hr>
+좋아하는 영화들
+
+{% for movie in movies %}
+<br>
+{{movie.title}}
+{% empty %}
+없다
+
+{% endfor %}
+<hr>
+팔로워 : {{user.followers.all | length}}
+팔로잉 : {{user.followings.all | length}}
+
+{% endblock body %}

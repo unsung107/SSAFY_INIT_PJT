@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+영화
+{% endblock title %}
+
+{% block body %}
+
+{% for movie in movies %}
+
+{{movie.title}}
+<br>
+<br>
+{{movie.description}}
+<hr>
+<br>
+{% endfor %}
+
+{% endblock body %}

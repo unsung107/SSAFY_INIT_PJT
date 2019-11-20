@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+영화 상세보기
+{% endblock title %}
+
+
+{% block body %}
+
+{{ movie.title }}{% if user.is_authenticated %}
+
+<a href="{% url 'movies:like' movie.id %}">좋아요</a>
+
+{% endif %}
+<br>
+{{ movie.audience }}
+<br>
+{{ movie.description }}
+<br>
+{{ movie.poster_url }}
+<br>
+<hr>
+좋아하는 사람들
+<br>  
+{% for user in movie.liked_users.all %}
+
+{{user.username}}
+<br>
+
+
+{% endfor %}
+<hr>
+댓글 작성
+{% if user.is_authenticated %}
+<form method = "POST" action="{% url 'movies:create_review' movie.id %}">
+{% csrf_token %}
+{{comment_form.as_p}}
+<button type="submit">댓글 작성</button>
+</form>
+{% endif %}
+<hr>
+댓글들
+
+<br>
+{% for review in movie.reviews.all %}
+{{review.content}}
+{% if user.id == review.user.id %}
+<a href="{% url 'movies:delete_review' review.id %}"><button>x</button></a>{% endif %}
+<br>
+{% endfor %}
+
+
+{% endblock body %}
